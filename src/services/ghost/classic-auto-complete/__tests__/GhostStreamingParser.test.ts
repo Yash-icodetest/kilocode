@@ -758,7 +758,7 @@ function subtractNumbers(a: number, b: number): number {
 		})
 
 		it("should parse empty document with cursor marker and function suggestion", () => {
-			// Simulating empty document on line 4 (3 empty lines before cursor)
+			// Simulating empty document on line 3 (2 empty lines before cursor)
 			const mockDocumentWithCursor: any = {
 				uri: { toString: () => "/test/file.ts", fsPath: "/test/file.ts" },
 				getText: () => `
@@ -777,21 +777,24 @@ function subtractNumbers(a: number, b: number): number {
 export function test() {
 <<<AUTOCOMPLETE_HERE>>>]]></replace></change>`
 
-			const result = parser.parseResponse(change, "", "")
+			const correctPrefix = "\n\n"
+			const correctSuffix = ""
+
+			const result = parser.parseResponse(change, correctPrefix, correctSuffix)
 
 			// Parser correctly produces suggestions from this XML
 			expect(result.hasNewSuggestions).toBe(true)
 			expect(result.suggestions.hasSuggestions()).toBe(true)
 
 			// Expected content after removing cursor marker
-			const expectedContent = `
-
-export function test() {
+			const expectedText = `export function test() {
 `
 
 			const fimContent = result.suggestions.getFillInAtCursor()
 			expect(fimContent).toBeDefined()
-			expect(fimContent?.text).toBe(expectedContent)
+			expect(fimContent?.text).toBe(expectedText)
+			expect(fimContent?.prefix).toBe(correctPrefix)
+			expect(fimContent?.suffix).toBe(correctSuffix)
 		})
 	})
 

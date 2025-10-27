@@ -282,8 +282,6 @@ export class GhostProvider {
 	private async provideCodeSuggestions(initialContext: GhostSuggestionContext): Promise<void> {
 		// Cancel any ongoing suggestions
 		await this.cancelSuggestions()
-		this.startRequesting()
-		this.isRequestCancelled = false
 
 		const context = await this.ghostContext.generate(initialContext)
 
@@ -297,6 +295,10 @@ export class GhostProvider {
 		if (this.inlineCompletionProvider.cachedSuggestionAvailable(prefix, suffix)) {
 			return
 		}
+
+		// Only start animation if we're actually going to make an LLM call
+		this.startRequesting()
+		this.isRequestCancelled = false
 
 		const { systemPrompt, userPrompt } = this.autoTriggerStrategy.getPrompts(
 			autocompleteInput,
@@ -377,12 +379,16 @@ export class GhostProvider {
 			if (finalParseResult.hasNewSuggestions && !hasShownFirstSuggestion) {
 				// Handle case where sanitization produced suggestions
 				this.suggestions = finalParseResult.suggestions
+				// Update inline provider IMMEDIATELY before any rendering/triggering
+				this.inlineCompletionProvider.updateSuggestions(this.suggestions)
 				hasShownFirstSuggestion = true
 				this.stopProcessing()
 				await this.render()
 			} else if (finalParseResult.hasNewSuggestions && hasShownFirstSuggestion) {
 				// Update existing suggestions with sanitized results
 				this.suggestions = finalParseResult.suggestions
+				// Update inline provider IMMEDIATELY before any rendering/triggering
+				this.inlineCompletionProvider.updateSuggestions(this.suggestions)
 				await this.render()
 			}
 
@@ -399,10 +405,10 @@ export class GhostProvider {
 	}
 
 	private async render() {
-		await this.updateGlobalContext()
-
+		// Update inline provider FIRST, before updateGlobalContext
+		// updateGlobalContext may trigger VSCode to query for suggestions
 		this.inlineCompletionProvider.updateSuggestions(this.suggestions)
-
+		await this.updateGlobalContext()
 		await vscode.commands.executeCommand("editor.action.inlineSuggest.trigger")
 	}
 
