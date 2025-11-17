@@ -62,11 +62,11 @@ Each deployment is saved automatically with:
 - Build logs  
 - Preview/Production URL  
 
-From the history view, you can:
+From the Deployment Details, you can:
 
 - Inspect previous builds  
-- Restore a stable version  
-- Compare outputs across deployments  
+- Redeploy the project
+- Delete the deployment
 
 ## Common Use Cases
 
