@@ -1,9 +1,9 @@
 // kilocode_change - new file
-import axios from "axios"
 import { getKiloUrlFromToken } from "@roo-code/types"
 import { X_KILOCODE_ORGANIZATIONID, X_KILOCODE_TESTER } from "../../shared/kilocode/headers"
 import { KiloOrganization, KiloOrganizationSchema } from "../../shared/kilocode/organization"
 import { logger } from "../../utils/logging"
+import { fetchWithRetries } from "../../shared/http"
 
 /**
  * Service for fetching and managing Kilo Code organization settings
@@ -44,17 +44,27 @@ export class OrganizationService {
 				kilocodeToken,
 			)
 
-			const response = await axios.get(url, { headers })
+			const response = await fetchWithRetries({
+				url,
+				method: "GET",
+				headers,
+			})
+
+			if (!response.ok) {
+				throw new Error(`Failed to fetch organization: ${response.statusText}`)
+			}
+
+			const data = await response.json()
 
 			// Validate the response against the schema
-			const validationResult = KiloOrganizationSchema.safeParse(response.data)
+			const validationResult = KiloOrganizationSchema.safeParse(data)
 
 			if (!validationResult.success) {
 				logger.error("[OrganizationService] Invalid organization response format", {
 					organizationId,
 					errors: validationResult.error.errors,
 				})
-				return response.data
+				return data
 			}
 
 			logger.info("[OrganizationService] Successfully fetched organization", {

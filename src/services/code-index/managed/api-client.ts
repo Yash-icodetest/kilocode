@@ -6,11 +6,11 @@
  * backend API for managed indexing operations (upsert, search, delete, manifest).
  */
 
-import axios from "axios"
 import FormData from "form-data"
 import { ManagedCodeChunk, SearchRequest, SearchResult, ServerManifest } from "./types"
 import { logger } from "../../../utils/logging"
 import { getKiloBaseUriFromToken } from "../../../../packages/types/src/kilocode/kilocode"
+import { fetchWithRetries } from "../../../shared/http"
 
 /**
  * Upserts code chunks to the server using the new envelope format
@@ -57,17 +57,17 @@ export async function upsertChunks(chunks: ManagedCodeChunk[], kilocodeToken: st
 	}
 
 	try {
-		const response = await axios({
-			method: "PUT",
+		const response = await fetchWithRetries({
 			url: `${baseUrl}/api/code-indexing/upsert`,
-			data: requestBody,
+			method: "PUT",
 			headers: {
 				Authorization: `Bearer ${kilocodeToken}`,
 				"Content-Type": "application/json",
 			},
+			body: JSON.stringify(requestBody),
 		})
 
-		if (response.status !== 200) {
+		if (!response.ok) {
 			throw new Error(`Failed to upsert chunks: ${response.statusText}`)
 		}
 
@@ -91,21 +91,21 @@ export async function searchCode(request: SearchRequest, kilocodeToken: string):
 	const baseUrl = getKiloBaseUriFromToken(kilocodeToken)
 
 	try {
-		const response = await axios({
-			method: "POST",
+		const response = await fetchWithRetries({
 			url: `${baseUrl}/api/code-indexing/search`,
-			data: request,
+			method: "POST",
 			headers: {
 				Authorization: `Bearer ${kilocodeToken}`,
 				"Content-Type": "application/json",
 			},
+			body: JSON.stringify(request),
 		})
 
-		if (response.status !== 200) {
+		if (!response.ok) {
 			throw new Error(`Search failed: ${response.statusText}`)
 		}
 
-		const results: SearchResult[] = response.data || []
+		const results: SearchResult[] = (await response.json()) || []
 		logger.info(`Search returned ${results.length} results`)
 		return results
 	} catch (error) {
@@ -139,22 +139,22 @@ export async function deleteFiles(
 	const baseUrl = getKiloBaseUriFromToken(kilocodeToken)
 
 	try {
-		const response = await axios({
-			method: "PUT",
+		const response = await fetchWithRetries({
 			url: `${baseUrl}/api/code-indexing/delete`,
-			data: {
-				organizationId,
-				projectId,
-				gitBranch,
-				filePaths,
-			},
+			method: "PUT",
 			headers: {
 				Authorization: `Bearer ${kilocodeToken}`,
 				"Content-Type": "application/json",
 			},
+			body: JSON.stringify({
+				organizationId,
+				projectId,
+				gitBranch,
+				filePaths,
+			}),
 		})
 
-		if (response.status !== 200) {
+		if (!response.ok) {
 			throw new Error(`Failed to delete files: ${response.statusText}`)
 		}
 
@@ -225,17 +225,17 @@ export async function upsertFile(params: UpsertFileParams): Promise<void> {
 		formData.append("gitBranch", gitBranch)
 		formData.append("isBaseBranch", String(isBaseBranch))
 
-		const response = await axios({
-			method: "POST",
+		const response = await fetchWithRetries({
 			url: `${baseUrl}/api/code-indexing/upsert-by-file`,
-			data: formData,
+			method: "POST",
 			headers: {
 				Authorization: `Bearer ${kilocodeToken}`,
 				...formData.getHeaders(),
 			},
+			body: formData as any,
 		})
 
-		if (response.status !== 200) {
+		if (!response.ok) {
 			throw new Error(`Failed to upsert file: ${response.statusText}`)
 		}
 
@@ -269,25 +269,26 @@ export async function getServerManifest(
 	const baseUrl = getKiloBaseUriFromToken(kilocodeToken)
 
 	try {
-		const response = await axios({
+		const params = new URLSearchParams({
+			organizationId,
+			projectId,
+			gitBranch,
+		})
+
+		const response = await fetchWithRetries({
+			url: `${baseUrl}/api/code-indexing/manifest?${params.toString()}`,
 			method: "GET",
-			url: `${baseUrl}/api/code-indexing/manifest`,
-			params: {
-				organizationId,
-				projectId,
-				gitBranch,
-			},
 			headers: {
 				Authorization: `Bearer ${kilocodeToken}`,
 				"Content-Type": "application/json",
 			},
 		})
 
-		if (response.status !== 200) {
+		if (!response.ok) {
 			throw new Error(`Failed to get manifest: ${response.statusText}`)
 		}
 
-		const manifest: ServerManifest = response.data
+		const manifest: ServerManifest = await response.json()
 		logger.info(`Retrieved manifest for ${gitBranch}: ${manifest.totalFiles} files, ${manifest.totalChunks} chunks`)
 		return manifest
 	} catch (error) {
