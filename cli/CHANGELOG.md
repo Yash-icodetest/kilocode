@@ -1,5 +1,11 @@
 # @kilocode/cli
 
+## 0.20.0
+
+### Minor Changes
+
+- [#4943](https://github.com/Kilo-Org/kilocode/pull/4943) [`eef76d0`](https://github.com/Kilo-Org/kilocode/commit/eef76d0e4b962c7b9680e5c9226b22ecaa3fa79b) Thanks [@marius-kilocode](https://github.com/marius-kilocode)! - Add Shift+Tab keyboard shortcut to cycle through modes in the CLI
+
 ## 0.19.3
 
 ### Patch Changes
