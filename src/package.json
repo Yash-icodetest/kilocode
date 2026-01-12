@@ -1,6 +1,6 @@
 {
 	"name": "kilo-code",
-	"displayName": "%extension.displayName%",
+	"displayName": "xpeer-coder",
 	"description": "%extension.description%",
 	"publisher": "kilocode",
 	"version": "4.144.0",
@@ -17,7 +17,7 @@
 		"workspace"
 	],
 	"author": {
-		"name": "Kilo Code"
+		"name": "XPEER CODER"
 	},
 	"repository": {
 		"type": "git",
@@ -57,13 +57,13 @@
 		"walkthroughs": [
 			{
 				"id": "kiloCodeWalkthrough",
-				"title": "5 ways Kilo Code helps you code",
+				"title": "5 ways XPEER CODER helps you code",
 				"description": "You now have a personal AI coding assistant.",
 				"steps": [
 					{
 						"id": "welcome",
 						"title": "Write code for you",
-						"description": "Describe what you want to build. Kilo Code will write it from scratch, generate the files, and run them for you.",
+						"description": "Describe what you want to build. XPEER CODER will write it from scratch, generate the files, and run them for you.",
 						"media": {
 							"markdown": "./dist/walkthrough/step1.md"
 						}
@@ -71,7 +71,7 @@
 					{
 						"id": "getting-started",
 						"title": "Understand your codebase",
-						"description": "Need clarity on how something works? Ask Kilo Code about any part of your files and get a clear explanation.",
+						"description": "Need clarity on how something works? Ask XPEER CODER about any part of your files and get a clear explanation.",
 						"media": {
 							"markdown": "./dist/walkthrough/step2.md"
 						},
@@ -82,7 +82,7 @@
 					{
 						"id": "modes",
 						"title": "Get things working again",
-						"description": "Stuck on an error? Kilo Code can find the issue, fix it, and get your code running.",
+						"description": "Stuck on an error? XPEER CODER can find the issue, fix it, and get your code running.",
 						"media": {
 							"markdown": "./dist/walkthrough/step3.md"
 						}
@@ -253,8 +253,8 @@
 				"command": "kilo-code.vsc.generateCommitMessage",
 				"title": "%command.generateCommitMessage.title%",
 				"icon": {
-					"light": "assets/icons/kilo-light.svg",
-					"dark": "assets/icons/kilo-dark.svg"
+					"light": "assets/icons/kilo.png",
+					"dark": "assets/icons/kilo.png"
 				},
 				"category": "%configuration.title%"
 			},
@@ -303,8 +303,8 @@
 				"command": "kilo-code.open",
 				"title": "%views.activitybar.title%",
 				"icon": {
-					"light": "assets/icons/kilo-light.svg",
-					"dark": "assets/icons/kilo-dark.svg"
+					"light": "assets/icons/kilo.png",
+					"dark": "assets/icons/kilo.png"
 				}
 			}
 		],
@@ -627,9 +627,9 @@
 		},
 		"icons": {
 			"kilo-logo": {
-				"description": "Kilo Code logo",
+				"description": "XPEER CODER logo",
 				"default": {
-					"fontPath": "assets/icons/kilo-icon-font.woff2",
+					"fontPath": "assets/icons/kilo.png",
 					"fontCharacter": "\\F101"
 				}
 			}

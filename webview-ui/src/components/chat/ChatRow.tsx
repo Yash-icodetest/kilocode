@@ -1775,7 +1775,8 @@ export const ChatRowContent = ({
 										marginBottom: "-1.5px",
 									}}></span>
 								<span style={{ color: normalColor, fontWeight: "bold" }}>
-									{t("kilocode:chat.condense.wantsToCondense")}
+									{/* {t("kilocode:chat.condense.wantsToCondense")} */}
+									XPeer Coder wants to create
 								</span>
 							</div>
 							<NewTaskPreview context={message.text || ""} />
@@ -1804,7 +1805,7 @@ export const ChatRowContent = ({
 										marginBottom: "-1.5px",
 									}}></span>
 								<span style={{ color: normalColor, fontWeight: "bold" }}>
-									KiloCode wants to create a Github issue:
+									Xpeer Coder wants to create a Github issue:
 								</span>
 							</div>
 							<ReportBugPreview data={message.text || ""} />

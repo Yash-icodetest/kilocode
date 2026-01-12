@@ -62,7 +62,7 @@ export class DeviceAuthHandler {
 				})
 
 				this.callbacks.showInformationMessage(
-					`Kilo Code successfully configured! Authenticated as ${userEmail}`,
+					`XPEER CODER successfully configured! Authenticated as ${userEmail}`,
 				)
 
 				// Clean up

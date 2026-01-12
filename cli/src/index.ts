@@ -164,7 +164,7 @@ program
 
 		if (!hasConfig && !hasEnvConfig) {
 			// No config file and no env config - show auth wizard
-			console.info("Welcome to the Kilo Code CLI! 🎉\n")
+			console.info("Welcome to the XPeer Coder CLI! 🎉\n")
 			console.info("To get you started, please fill out these following questions.")
 			await authWizard()
 		} else if (!hasConfig && hasEnvConfig) {

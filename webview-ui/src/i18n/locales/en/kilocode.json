@@ -1,7 +1,7 @@
 {
 	"welcome": {
-		"greeting": "Welcome to Kilo Code!",
-		"introText1": "Kilo Code is a free, open source AI coding agent.",
+		"greeting": "Welcome to XPeer Coder!",
+		"introText1": "XPeer Coder is a free, open source AI coding agent.",
 		"introText2": "It works with the latest AI models like Claude Sonnet 4.5, Gemini 2.5 Pro, GPT-5, and 450+ more.",
 		"introText3": "Create a free account and get $20 in bonus credits when you top-up for the first time.",
 		"ctaButton": "Get Started",
@@ -11,8 +11,8 @@
 	},
 	"lowCreditWarning": {
 		"addCredit": "Add Credit",
-		"lowBalance": "Your Kilo Code balance is low",
-		"newOrganization": "Using Kilo for work?"
+		"lowBalance": "Your XPeer Coder balance is low",
+		"newOrganization": "Using XPeer for work?"
 	},
 	"memoryWarning": {
 		"message": "Memory usage is at {{percentage}}%. Please restart your IDE to prevent crashes."
@@ -49,10 +49,10 @@
 			"mcp": "MCP Servers"
 		},
 		"provider": {
-			"account": "Kilo Code Account",
-			"apiKey": "Kilo Code API Key",
-			"login": "Log in at Kilo Code",
-			"logout": "Log out from Kilo Code",
+			"account": "XPeer Coder Account",
+			"apiKey": "XPeer Coder API Key",
+			"login": "Log in at XPeer Coder",
+			"logout": "Log out from XPeer Coder",
 			"providerRouting": {
 				"title": "Provider Routing",
 				"managedByOrganization": "Manage Organization-level Provider Routing",
@@ -71,12 +71,12 @@
 					"zdr": "Zero data retention"
 				}
 			},
-			"automaticFetch": "The latest models are automatically available in Kilo Code. If you're unsure which model to choose, Kilo Code works best with the recommended models listed at the top in <strong>bold face</strong>."
+			"automaticFetch": "The latest models are automatically available in XPeer Coder. If you're unsure which model to choose, XPeer Coder works best with the recommended models listed at the top in <strong>bold face</strong>."
 		},
 		"modelInfo": {
 			"contextWindow": "Context window",
 			"providerBreakdown": "Provider Price and Capability Breakdown",
-			"averageKiloCodeCost": "This is the average actual spent for Kilo Code using this model over the last week. It may be lower than the listed price due to prompt cache utilization.",
+			"averageKiloCodeCost": "This is the average actual spent for XPeer Coder using this model over the last week. It may be lower than the listed price due to prompt cache utilization.",
 			"table": {
 				"provider": "Provider",
 				"context": "The endpoint can process this number of tokens (input + output).",
@@ -89,15 +89,15 @@
 		"contextManagement": {
 			"allowVeryLargeReads": {
 				"label": "Allow very large file reads",
-				"description": "When enabled, Kilo Code will perform very large file or MCP output reads even if there is a high chance of overflowing the context window (content size >80% of context window)."
+				"description": "When enabled, XPeer Coder will perform very large file or MCP output reads even if there is a high chance of overflowing the context window (content size >80% of context window)."
 			}
 		},
 		"systemNotifications": {
 			"label": "Enable System Notifications",
-			"description": "When enabled, Kilo Code will send system notifications for important events like task completion or errors.",
+			"description": "When enabled, XPeer Coder will send system notifications for important events like task completion or errors.",
 			"testButton": "Test Notification",
-			"testTitle": "Kilo Code",
-			"testMessage": "This is a test notification from Kilo Code."
+			"testTitle": "XPeer Coder",
+			"testMessage": "This is a test notification from XPeer Coder."
 		},
 		"terminal": {
 			"commandGenerator": {
@@ -118,7 +118,7 @@
 	},
 	"chat": {
 		"condense": {
-			"wantsToCondense": "Kilo Code wants to condense your conversation",
+			"wantsToCondense": "XPeer Coder wants to condense your conversation",
 			"condenseConversation": "Condense Conversation"
 		},
 		"seeNewChanges": "See New Changes",
@@ -149,15 +149,15 @@
 	},
 	"docs": "Docs",
 	"rules": {
-		"tooltip": "Manage Kilo Code Rules & Workflows",
-		"ariaLabel": "Kilo Code Rules",
+		"tooltip": "Manage XPeer Coder Rules & Workflows",
+		"ariaLabel": "XPeer Coder Rules",
 		"tabs": {
 			"rules": "Rules",
 			"workflows": "Workflows"
 		},
 		"description": {
-			"rules": "Rules allow you to provide Kilo Code with instructions it should follow in all modes and for all prompts. They are a persistent way to include context and preferences for all conversations in your workspace or globally.",
-			"workflows": "Workflows are a prepared template for a conversation. Workflows can allow you to define prompts you use frequently, and can include a series of steps to guide Kilo Code through repetitive tasks, such as deploying a service or submitting a PR. To invoke a workflow, type",
+			"rules": "Rules allow you to provide XPeer Coder with instructions it should follow in all modes and for all prompts. They are a persistent way to include context and preferences for all conversations in your workspace or globally.",
+			"workflows": "Workflows are a prepared template for a conversation. Workflows can allow you to define prompts you use frequently, and can include a series of steps to guide XPeer Coder through repetitive tasks, such as deploying a service or submitting a PR. To invoke a workflow, type",
 			"workflowsInChat": "in the chat."
 		},
 		"sections": {
@@ -223,7 +223,7 @@
 	"toolCallStyle": {
 		"title": "Tool Call Style",
 		"description": "Choose how tool calls are formatted in the system prompt. JSON is currently experimental and mostly intended for users interested in contributing to its development.",
-		"automatic": "Let Kilo decide",
+		"automatic": "Let XPeer Coder decide",
 		"xml": "XML",
 		"json": "JSON"
 	},
@@ -272,7 +272,7 @@
 			},
 			"noCredits": {
 				"title": "No credits in your account",
-				"description": "Your Kilo Code account has no credits. To use autocomplete, please add credits to your account.",
+				"description": "Your XPeer Coder account has no credits. To use autocomplete, please add credits to your account.",
 				"buyCredits": "Buy credits →"
 			},
 			"configureAutocompleteProfile": "Use any model by going to profiles and configuring a Profile of the Profile Type Autocomplete."
@@ -312,7 +312,7 @@
 		"shareModesNewBanner": "New: Share modes by creating an organization"
 	},
 	"deviceAuth": {
-		"title": "Sign in to Kilo Code",
+		"title": "Sign in to XPeer Coder",
 		"step1": "Open the following URL on your browser",
 		"step2": "Verify the code and authorize this device on your browser",
 		"scanQr": "Or scan this QR code with your phone",
@@ -339,7 +339,7 @@
 			"title": "Speech-to-Text",
 			"description": "Speech-to-text is unavailable. Speech-to-text requires both FFmpeg and a valid OpenAI provider configured. <moreInfoLink>Click here for more information</moreInfoLink>.",
 			"openAiReason": "You need a valid OpenAI provider with an API key to use voice transcription.",
-			"ffmpegReason": "You need FFmpeg installed. <ffmpegLink>Click here</ffmpegLink> to have Kilo help you install FFmpeg.",
+			"ffmpegReason": "You need FFmpeg installed. <ffmpegLink>Click here</ffmpegLink> to have XPeer Coder help you install FFmpeg.",
 			"ffmpegMessage": "Help me install FFmpeg"
 		},
 		"microphone": {

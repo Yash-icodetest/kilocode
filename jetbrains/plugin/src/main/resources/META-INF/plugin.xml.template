@@ -48,7 +48,7 @@ SPDX-License-Identifier: Apache-2.0
         <toolWindow factoryClass="ai.kilocode.jetbrains.ui.RooToolWindowFactory"
                     id="Kilo Code"
                     secondary="true"
-                    icon="/icons/kilo-dark.svg"
+                    icon="/icons/kilo.png"
                     anchor="right" />
         <notificationGroup
                     id="kilocode"

@@ -3,8 +3,8 @@
 		"settings_imported": "Settings imported successfully."
 	},
 	"configDiscovery": {
-		"added": "Kilo Code: Added {{source}} {{configType}}: {{name}}{{modeStr}}",
-		"removed": "Kilo Code: Removed {{source}} {{configType}}: {{name}}{{modeStr}}"
+		"added": "XPeer Coder: Added {{source}} {{configType}}: {{name}}{{modeStr}}",
+		"removed": "XPeer Coder: Removed {{source}} {{configType}}: {{name}}{{modeStr}}"
 	},
 	"userFeedback": {
 		"message_update_failed": "Failed to update message",
@@ -55,18 +55,18 @@
 		}
 	},
 	"commitMessage": {
-		"activated": "Kilo Code commit message generator activated",
+		"activated": "XPeer Coder commit message generator activated",
 		"gitNotFound": "⚠️ Git repository not found or git not available",
 		"gitInitError": "⚠️ Git initialization error: {{error}}",
-		"generating": "Kilo: Generating commit message...",
-		"noChanges": "Kilo: No changes found to analyze",
-		"generated": "Kilo: Commit message generated!",
-		"generationFailed": "Kilo: Failed to generate commit message: {{errorMessage}}",
-		"generatingFromUnstaged": "Kilo: Generating message using unstaged changes",
-		"activationFailed": "Kilo: Failed to activate message generator: {{error}}",
-		"providerRegistered": "Kilo: Commit message provider registered",
+		"generating": "XPeer Coder: Generating commit message...",
+		"noChanges": "XPeer Coder: No changes found to analyze",
+		"generated": "XPeer Coder: Commit message generated!",
+		"generationFailed": "XPeer Coder: Failed to generate commit message: {{errorMessage}}",
+		"generatingFromUnstaged": "XPeer Coder: Generating message using unstaged changes",
+		"activationFailed": "XPeer Coder: Failed to activate message generator: {{error}}",
+		"providerRegistered": "XPeer Coder: Commit message provider registered",
 		"errors": {
-			"connectionFailed": "Failed to connect to Kilo Code extension",
+			"connectionFailed": "Failed to connect to XPeer Coder extension",
 			"timeout": "Request timed out after 30 seconds",
 			"invalidResponse": "Invalid response format received from extension",
 			"missingMessage": "No commit message received from extension",
@@ -92,7 +92,7 @@
 		"progress": {
 			"title": "Generating Commit Message",
 			"analyzing": "Analyzing changes...",
-			"connecting": "Connecting to Kilo Code...",
+			"connecting": "Connecting to XPeer Coder...",
 			"generating": "Generating commit message..."
 		},
 		"ui": {
@@ -106,8 +106,8 @@
 			"snoozed": "snoozed",
 			"warning": "$(warning) Autocomplete",
 			"tooltip": {
-				"basic": "Kilo Code Autocomplete",
-				"disabled": "Kilo Code Autocomplete (disabled)",
+				"basic": "XPeer Coder Autocomplete",
+				"disabled": "XPeer Coder Autocomplete (disabled)",
 				"tokenError": "A valid token must be set to use Autocomplete",
 				"sessionTotal": "Session total cost:",
 				"provider": "Provider:",
@@ -122,36 +122,36 @@
 				"lessThanCent": "<$0.01"
 			}
 		},
-		"toggleMessage": "Kilo Code Autocomplete {{status}}",
+		"toggleMessage": "XPeer Coder Autocomplete {{status}}",
 		"progress": {
-			"title": "Kilo Code",
+			"title": "XPeer Coder",
 			"analyzing": "Analyzing your code...",
 			"generating": "Generating suggested edits...",
 			"processing": "Processing suggested edits...",
 			"showing": "Displaying suggested edits..."
 		},
 		"input": {
-			"title": "Kilo Code: Quick Task",
+			"title": "XPeer Coder: Quick Task",
 			"placeholder": "e.g., 'refactor this function to be more efficient'"
 		},
 		"commands": {
-			"generateSuggestions": "Kilo Code: Generate Suggested Edits",
+			"generateSuggestions": "XPeer Coder: Generate Suggested Edits",
 			"displaySuggestions": "Display Suggested Edits",
 			"cancelSuggestions": "Cancel Suggested Edits",
 			"applyCurrentSuggestion": "Apply Current Suggested Edit",
 			"applyAllSuggestions": "Apply All Suggested Edits",
-			"category": "Kilo Code"
+			"category": "XPeer Coder"
 		},
 		"codeAction": {
-			"title": "Kilo Code: Suggested Edits"
+			"title": "XPeer Coder: Suggested Edits"
 		},
 		"chatParticipant": {
-			"fullName": "Kilo Code Agent",
+			"fullName": "XPeer Coder Agent",
 			"name": "Agent",
 			"description": "I can help you with quick tasks and suggested edits."
 		},
 		"incompatibilityExtensionPopup": {
-			"message": "The Kilo Code Autocomplete is being blocked by a conflict with GitHub Copilot. To fix this, you must disable Copilot's inline suggestions.",
+			"message": "The XPeer Coder Autocomplete is being blocked by a conflict with GitHub Copilot. To fix this, you must disable Copilot's inline suggestions.",
 			"disableCopilot": "Disable Copilot",
 			"disableInlineAssist": "Disable Autocomplete"
 		}
@@ -188,13 +188,13 @@
 		}
 	},
 	"terminalCommandGenerator": {
-		"tipMessage": "Kilo: Press {{shortcut}} to generate terminal commands",
-		"inputPrompt": "Kilo: Describe the command you want to generate",
+		"tipMessage": "XPeer Coder: Press {{shortcut}} to generate terminal commands",
+		"inputPrompt": "XPeer Coder: Describe the command you want to generate",
 		"inputPlaceholder": "e.g., kill the process running on port 3001, find large files, etc",
-		"noActiveTerminal": "Kilo: No active terminal found. Please open a terminal first.",
-		"generatingProgress": "Kilo: Generating terminal command...",
-		"commandGenerated": "Kilo: Generated command: {{command}}",
-		"generationFailed": "Kilo: Failed to generate command: {{error}}",
+		"noActiveTerminal": "XPeer Coder: No active terminal found. Please open a terminal first.",
+		"generatingProgress": "XPeer Coder: Generating terminal command...",
+		"commandGenerated": "XPeer Coder: Generated command: {{command}}",
+		"generationFailed": "XPeer Coder: Failed to generate command: {{error}}",
 		"warningDialog": {
 			"title": "Terminal Safety Warning",
 			"message": "Double-check all generated commands before running them. Terminal actions cannot always be undone— running unverified commands can result in irreversible data loss or system damage. Review and understand the command completely before proceeding!",

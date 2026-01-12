@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
 		},
 		{
 			type: "category",
-			label: "Using Kilo Code",
+			label: "Using Xpeer.ai",
 			items: [
 				"basic-usage/the-chat-interface",
 				"basic-usage/model-selection-guide",
@@ -184,7 +184,7 @@ const sidebars: SidebarsConfig = {
 		},
 		{
 			type: "category",
-			label: "Extending Kilo Code",
+			label: "Extending Xpeer.ai",
 			items: [
 				"advanced-usage/local-models",
 				{

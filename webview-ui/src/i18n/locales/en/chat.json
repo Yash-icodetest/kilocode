@@ -1,5 +1,5 @@
 {
-	"greeting": "What can Kilo Code do for you?",
+	"greeting": "What can XPeer Coder do for you?",
 	"task": {
 		"title": "Task",
 		"expand": "Expand task",
@@ -21,7 +21,7 @@
 		"sharePublicly": "Share Publicly",
 		"sharePubliclyDescription": "Anyone with the link can access",
 		"connectToCloud": "Connect to Cloud",
-		"connectToCloudDescription": "Sign in to Kilo Code Cloud to share tasks",
+		"connectToCloudDescription": "Sign in to XPeer Coder Cloud to share tasks",
 		"sharingDisabledByOrganization": "Sharing disabled by organization",
 		"shareSuccessOrganization": "Organization link copied to clipboard",
 		"shareSuccessPublic": "Public link copied to clipboard",
@@ -125,7 +125,7 @@
 		"title": "Modes",
 		"marketplace": "Mode Marketplace",
 		"settings": "Mode Settings",
-		"description": "Specialized personas that tailor Kilo Code's behavior.",
+		"description": "Specialized personas that tailor XPeer Coder's behavior.",
 		"searchPlaceholder": "Search modes...",
 		"noResults": "No results found",
 		"organizationModes": "Organization Modes"
@@ -162,7 +162,7 @@
 			"429": "Too many requests. You're being rate-limited by the provider. Please wait a bit before your next API call.",
 			"500": "Provider server error. Something is wrong on the provider side, there's nothing wrong with your request.",
 			"connection": "Connection error. Make sure you have a working internet connection.",
-			"unknown": "Unknown API error. Please contact Kilo support."
+			"unknown": "Unknown API error. Please contact XPeer Coder support."
 		}
 	},
 	"checkpoint": {
@@ -200,50 +200,50 @@
 		}
 	},
 	"instructions": {
-		"wantsToFetch": "Kilo Code wants to fetch detailed instructions to assist with the current task"
+		"wantsToFetch": "XPeer Coder wants to fetch detailed instructions to assist with the current task"
 	},
 	"fileOperations": {
-		"wantsToRead": "Kilo Code wants to read this file",
-		"wantsToReadMultiple": "Kilo Code wants to read multiple files",
-		"wantsToReadAndXMore": "Kilo Code wants to read this file and {{count}} more",
-		"wantsToReadOutsideWorkspace": "Kilo Code wants to read this file outside of the workspace",
-		"didRead": "Kilo Code read this file",
-		"wantsToEdit": "Kilo Code wants to edit this file",
-		"wantsToEditOutsideWorkspace": "Kilo Code wants to edit this file outside of the workspace",
-		"wantsToEditProtected": "Kilo Code wants to edit a protected configuration file",
-		"wantsToApplyBatchChanges": "Kilo Code wants to apply changes to multiple files",
-		"wantsToGenerateImage": "Kilo Code wants to generate an image",
-		"wantsToGenerateImageOutsideWorkspace": "Kilo Code wants to generate an image outside of the workspace",
-		"wantsToGenerateImageProtected": "Kilo Code wants to generate an image in a protected location",
-		"didGenerateImage": "Kilo Code generated an image",
-		"wantsToCreate": "Kilo Code wants to create a new file",
-		"wantsToInsert": "Kilo Code wants to insert content into this file",
-		"wantsToInsertWithLineNumber": "Kilo Code wants to insert content into this file at line {{lineNumber}}",
-		"wantsToInsertAtEnd": "Kilo Code wants to append content to the end of this file",
-		"wantsToDelete": "Kilo Code wants to delete this file",
-		"wantsToDeleteDirectory": "Kilo Code wants to delete this directory"
+		"wantsToRead": "XPeer Coder wants to read this file",
+		"wantsToReadMultiple": "XPeer Coder wants to read multiple files",
+		"wantsToReadAndXMore": "XPeer Coder wants to read this file and {{count}} more",
+		"wantsToReadOutsideWorkspace": "XPeer Coder wants to read this file outside of the workspace",
+		"didRead": "XPeer Coder read this file",
+		"wantsToEdit": "XPeer Coder wants to edit this file",
+		"wantsToEditOutsideWorkspace": "XPeer Coder wants to edit this file outside of the workspace",
+		"wantsToEditProtected": "XPeer Coder wants to edit a protected configuration file",
+		"wantsToApplyBatchChanges": "XPeer Coder wants to apply changes to multiple files",
+		"wantsToGenerateImage": "XPeer Coder wants to generate an image",
+		"wantsToGenerateImageOutsideWorkspace": "XPeer Coder wants to generate an image outside of the workspace",
+		"wantsToGenerateImageProtected": "XPeer Coder wants to generate an image in a protected location",
+		"didGenerateImage": "XPeer Coder generated an image",
+		"wantsToCreate": "XPeer Coder wants to create a new file",
+		"wantsToInsert": "XPeer Coder wants to insert content into this file",
+		"wantsToInsertWithLineNumber": "XPeer Coder wants to insert content into this file at line {{lineNumber}}",
+		"wantsToInsertAtEnd": "XPeer Coder wants to append content to the end of this file",
+		"wantsToDelete": "XPeer Coder wants to delete this file",
+		"wantsToDeleteDirectory": "XPeer Coder wants to delete this directory"
 	},
 	"directoryOperations": {
-		"wantsToViewTopLevel": "Kilo Code wants to view the top level files in this directory",
-		"didViewTopLevel": "Kilo Code viewed the top level files in this directory",
-		"wantsToViewTopLevelOutsideWorkspace": "Kilo Code wants to view the top level files in this directory (outside workspace)",
-		"didViewTopLevelOutsideWorkspace": "Kilo Code viewed the top level files in this directory (outside workspace)",
-		"wantsToViewRecursive": "Kilo Code wants to recursively view all files in this directory",
-		"didViewRecursive": "Kilo Code recursively viewed all files in this directory",
-		"wantsToViewRecursiveOutsideWorkspace": "Kilo Code wants to recursively view all files in this directory (outside workspace)",
-		"didViewRecursiveOutsideWorkspace": "Kilo Code recursively viewed all files in this directory (outside workspace)",
-		"wantsToViewDefinitions": "Kilo Code wants to view source code definition names used in this directory",
-		"didViewDefinitions": "Kilo Code viewed source code definition names used in this directory",
-		"wantsToViewDefinitionsOutsideWorkspace": "Kilo Code wants to view source code definition names used in this directory (outside workspace)",
-		"didViewDefinitionsOutsideWorkspace": "Kilo Code viewed source code definition names used in this directory (outside workspace)",
-		"wantsToSearch": "Kilo Code wants to search this directory for <code>{{regex}}</code>",
-		"didSearch": "Kilo Code searched this directory for <code>{{regex}}</code>",
-		"wantsToSearchOutsideWorkspace": "Kilo Code wants to search this directory (outside workspace) for <code>{{regex}}</code>",
-		"didSearchOutsideWorkspace": "Kilo Code searched this directory (outside workspace) for <code>{{regex}}</code>"
+		"wantsToViewTopLevel": "XPeer Coder wants to view the top level files in this directory",
+		"didViewTopLevel": "XPeer Coder viewed the top level files in this directory",
+		"wantsToViewTopLevelOutsideWorkspace": "XPeer Coder wants to view the top level files in this directory (outside workspace)",
+		"didViewTopLevelOutsideWorkspace": "XPeer Coder viewed the top level files in this directory (outside workspace)",
+		"wantsToViewRecursive": "XPeer Coder wants to recursively view all files in this directory",
+		"didViewRecursive": "XPeer Coder recursively viewed all files in this directory",
+		"wantsToViewRecursiveOutsideWorkspace": "XPeer Coder wants to recursively view all files in this directory (outside workspace)",
+		"didViewRecursiveOutsideWorkspace": "XPeer Coder recursively viewed all files in this directory (outside workspace)",
+		"wantsToViewDefinitions": "XPeer Coder wants to view source code definition names used in this directory",
+		"didViewDefinitions": "XPeer Coder viewed source code definition names used in this directory",
+		"wantsToViewDefinitionsOutsideWorkspace": "XPeer Coder wants to view source code definition names used in this directory (outside workspace)",
+		"didViewDefinitionsOutsideWorkspace": "XPeer Coder viewed source code definition names used in this directory (outside workspace)",
+		"wantsToSearch": "XPeer Coder wants to search this directory for <code>{{regex}}</code>",
+		"didSearch": "XPeer Coder searched this directory for <code>{{regex}}</code>",
+		"wantsToSearchOutsideWorkspace": "XPeer Coder wants to search this directory (outside workspace) for <code>{{regex}}</code>",
+		"didSearchOutsideWorkspace": "XPeer Coder searched this directory (outside workspace) for <code>{{regex}}</code>"
 	},
 	"codebaseSearch": {
-		"wantsToSearch": "Kilo Code wants to search the codebase for <code>{{query}}</code>",
-		"wantsToSearchWithPath": "Kilo Code wants to search the codebase for <code>{{query}}</code> in <code>{{path}}</code>",
+		"wantsToSearch": "XPeer Coder wants to search the codebase for <code>{{query}}</code>",
+		"wantsToSearchWithPath": "XPeer Coder wants to search the codebase for <code>{{query}}</code> in <code>{{path}}</code>",
 		"didSearch_one": "Found 1 result",
 		"didSearch_other": "Found {{count}} results",
 		"resultTooltip": "Similarity score: {{score}} (click to open file)"
@@ -268,24 +268,24 @@
 	"response": "Response",
 	"arguments": "Arguments",
 	"text": {
-		"rooSaid": "Kilo said"
+		"rooSaid": "XPeer Coder said"
 	},
 	"feedback": {
 		"youSaid": "You said"
 	},
 	"mcp": {
-		"wantsToUseTool": "Kilo Code wants to use a tool on the {{serverName}} MCP server",
-		"wantsToAccessResource": "Kilo Code wants to access a resource on the {{serverName}} MCP server"
+		"wantsToUseTool": "XPeer Coder wants to use a tool on the {{serverName}} MCP server",
+		"wantsToAccessResource": "XPeer Coder wants to access a resource on the {{serverName}} MCP server"
 	},
 	"modes": {
-		"wantsToSwitch": "Kilo Code wants to switch to {{mode}} mode",
-		"wantsToSwitchWithReason": "Kilo Code wants to switch to {{mode}} mode because: {{reason}}",
-		"didSwitch": "Kilo Code switched to {{mode}} mode",
-		"didSwitchWithReason": "Kilo Code switched to {{mode}} mode because: {{reason}}"
+		"wantsToSwitch": "XPeer Coder wants to switch to {{mode}} mode",
+		"wantsToSwitchWithReason": "XPeer Coder wants to switch to {{mode}} mode because: {{reason}}",
+		"didSwitch": "XPeer Coder switched to {{mode}} mode",
+		"didSwitchWithReason": "XPeer Coder switched to {{mode}} mode because: {{reason}}"
 	},
 	"subtasks": {
-		"wantsToCreate": "Kilo Code wants to create a new subtask in {{mode}} mode",
-		"wantsToFinish": "Kilo Code wants to finish this subtask",
+		"wantsToCreate": "XPeer Coder wants to create a new subtask in {{mode}} mode",
+		"wantsToFinish": "XPeer Coder wants to finish this subtask",
 		"newTaskContent": "Subtask Instructions",
 		"completionContent": "Subtask Completed",
 		"resultContent": "Subtask Results",
@@ -293,7 +293,7 @@
 		"completionInstructions": "Subtask completed! You can review the results and suggest any corrections or next steps. If everything looks good, confirm to return the result to the parent task."
 	},
 	"questions": {
-		"hasQuestion": "Kilo Code has a question"
+		"hasQuestion": "XPeer Coder has a question"
 	},
 	"taskCompleted": "Task Completed",
 	"error": "Error",
@@ -305,7 +305,7 @@
 	"diffError": {
 		"title": "Edit Unsuccessful"
 	},
-	"troubleMessage": "Kilo Code is having trouble...",
+	"troubleMessage": "XPeer Coder is having trouble...",
 	"powershell": {
 		"issues": "It seems like you're having Windows PowerShell issues, please see this"
 	},
@@ -348,7 +348,7 @@
 			"tryButton": "Try Cloud Agents"
 		},
 		"careers": "Also, <careersLink>we're hiring!</careersLink>",
-		"socialLinks": "Join us on <xLink>X</xLink>, <discordLink>Discord</discordLink>, or <redditLink>r/KiloCode</redditLink> 🚀"
+		"socialLinks": "Join us on <xLink>X</xLink>, <discordLink>Discord</discordLink>, or <redditLink>r/XPeer Coder</redditLink> 🚀"
 	},
 	"reasoning": {
 		"thinking": "Thinking",
@@ -360,7 +360,7 @@
 	},
 	"browser": {
 		"session": "Browser Session",
-		"rooWantsToUse": "Kilo Code wants to use the browser",
+		"rooWantsToUse": "XPeer Coder wants to use the browser",
 		"consoleLogs": "Console Logs",
 		"noNewLogs": "(No new logs)",
 		"screenshot": "Browser screenshot",
@@ -408,18 +408,18 @@
 	"profileViolationWarning": "The current profile isn't compatible with your organization's settings",
 	"shellIntegration": {
 		"title": "Command Execution Warning",
-		"description": "Your command is being executed without VSCode terminal shell integration. To suppress this warning you can disable shell integration in the <strong>Terminal</strong> section of the <settingsLink>Kilo Code settings</settingsLink> or troubleshoot VSCode terminal integration using the link below.",
+		"description": "Your command is being executed without VSCode terminal shell integration. To suppress this warning you can disable shell integration in the <strong>Terminal</strong> section of the <settingsLink>XPeer Coder settings</settingsLink> or troubleshoot VSCode terminal integration using the link below.",
 		"troubleshooting": "Click here for shell integration documentation."
 	},
 	"ask": {
 		"autoApprovedRequestLimitReached": {
 			"title": "Auto-Approved Request Limit Reached",
-			"description": "Kilo Code has reached the auto-approved limit of {{count}} API request(s). Would you like to reset the count and proceed with the task?",
+			"description": "XPeer Coder has reached the auto-approved limit of {{count}} API request(s). Would you like to reset the count and proceed with the task?",
 			"button": "Reset and Continue"
 		},
 		"autoApprovedCostLimitReached": {
 			"title": "Auto-Approved Cost Limit Reached",
-			"description": "Kilo has reached the auto-approved cost limit of ${{count}}. Would you like to reset the cost and proceed with the task?",
+			"description": "XPeer Coder has reached the auto-approved cost limit of ${{count}}. Would you like to reset the cost and proceed with the task?",
 			"button": "Reset and Continue"
 		}
 	},
@@ -457,8 +457,8 @@
 		}
 	},
 	"slashCommand": {
-		"wantsToRun": "Kilo Code wants to run a slash command",
-		"didRun": "Kilo Code ran a slash command"
+		"wantsToRun": "XPeer Coder wants to run a slash command",
+		"didRun": "XPeer Coder ran a slash command"
 	},
 	"queuedMessages": {
 		"title": "Queued Messages",
